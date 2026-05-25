@@ -1,4 +1,20 @@
-const categories = [
+type Category = {
+  name: string;
+  count: string;
+  image: string;
+};
+
+type PackingListGroup = "trending" | "saved";
+
+type PackingList = {
+  title: string;
+  meta: string;
+  tags: string;
+  image: string;
+  group: PackingListGroup;
+};
+
+const categories: Category[] = [
   {
     name: "Beach",
     count: "12 lists",
@@ -41,7 +57,7 @@ const categories = [
   },
 ];
 
-const packingLists = [
+const packingLists: PackingList[] = [
   {
     title: "10 Days in Italy in the Spring",
     meta: "Destination guide",
@@ -100,15 +116,23 @@ const packingLists = [
   },
 ];
 
-const categoryGrid = document.querySelector("#category-grid");
-const trendingRow = document.querySelector("#trending-row");
-const savedRow = document.querySelector("#saved-row");
-const allListGrid = document.querySelector("#all-list-grid");
-const searchInput = document.querySelector("#packing-search");
-const resultCount = document.querySelector("#result-count");
-const searchForm = document.querySelector(".search-panel");
+function requireElement<T extends HTMLElement>(selector: string): T {
+  const element = document.querySelector<T>(selector);
+  if (!element) {
+    throw new Error(`Expected element matching "${selector}"`);
+  }
+  return element;
+}
 
-function makeImage(src, alt) {
+const categoryGrid = requireElement<HTMLDivElement>("#category-grid");
+const trendingRow = requireElement<HTMLDivElement>("#trending-row");
+const savedRow = requireElement<HTMLDivElement>("#saved-row");
+const allListGrid = requireElement<HTMLDivElement>("#all-list-grid");
+const searchInput = requireElement<HTMLInputElement>("#packing-search");
+const resultCount = requireElement<HTMLParagraphElement>("#result-count");
+const searchForm = requireElement<HTMLFormElement>(".search-panel");
+
+function makeImage(src: string, alt: string): HTMLImageElement {
   const image = document.createElement("img");
   image.src = src;
   image.alt = alt;
@@ -116,7 +140,7 @@ function makeImage(src, alt) {
   return image;
 }
 
-function renderCategories() {
+function renderCategories(): void {
   categoryGrid.innerHTML = "";
   categories.forEach((category) => {
     const card = document.createElement("a");
@@ -129,7 +153,7 @@ function renderCategories() {
   });
 }
 
-function renderListCard(list) {
+function renderListCard(list: PackingList): HTMLAnchorElement {
   const card = document.createElement("a");
   card.className = "list-card";
   card.href = "packing-list.html";
@@ -139,7 +163,7 @@ function renderListCard(list) {
   return card;
 }
 
-function renderRows() {
+function renderRows(): void {
   trendingRow.innerHTML = "";
   savedRow.innerHTML = "";
   packingLists
@@ -150,7 +174,7 @@ function renderRows() {
     .forEach((list) => savedRow.append(renderListCard(list)));
 }
 
-function renderAllLists(query = "") {
+function renderAllLists(query = ""): void {
   const normalizedQuery = query.trim().toLowerCase();
   const matches = packingLists.filter((list) => {
     const haystack = `${list.title} ${list.meta} ${list.tags}`.toLowerCase();
@@ -169,9 +193,10 @@ renderRows();
 renderAllLists();
 
 categoryGrid.addEventListener("click", (event) => {
-  const card = event.target.closest(".category-card");
+  const card = (event.target as Element | null)?.closest<HTMLAnchorElement>(".category-card");
   if (!card) return;
   const category = card.dataset.category;
+  if (!category) return;
   searchInput.value = category;
   renderAllLists(category);
 });
@@ -179,7 +204,7 @@ categoryGrid.addEventListener("click", (event) => {
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   renderAllLists(searchInput.value);
-  document.querySelector("#all-lists").scrollIntoView({ behavior: "smooth" });
+  document.querySelector("#all-lists")?.scrollIntoView({ behavior: "smooth" });
 });
 
 searchInput.addEventListener("input", () => {

@@ -1,10 +1,21 @@
 # Packed N Prepped
 
-A custom packing-list discovery website inspired by a Pinterest-style hub. It is built as a lightweight static site so it can be published easily with GitHub Pages.
+A custom packing-list discovery website inspired by a Pinterest-style hub. It is now a small TypeScript/Vite site so it can grow cleanly while still publishing easily with GitHub Pages.
 
 ## Run Locally
 
-Open `index.html` in a browser, or serve the folder with any simple static server.
+Install dependencies once, then run the local dev server:
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
 
 ## Publish With GitHub Pages
 
@@ -12,3 +23,8 @@ Open `index.html` in a browser, or serve the folder with any simple static serve
 2. Push these files to the repository.
 3. In GitHub, open Settings > Pages.
 4. Choose the main branch and the root folder.
+
+## Project Notes
+
+- Use TypeScript for site behavior.
+- Use the SSH Git remote for GitHub pushes.
