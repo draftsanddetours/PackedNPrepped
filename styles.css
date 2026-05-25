@@ -123,8 +123,10 @@ svg {
   align-items: center;
   padding: clamp(34px, 6vw, 70px) clamp(20px, 5vw, 64px);
   background:
-    linear-gradient(90deg, rgba(255, 253, 249, 0.96) 0%, rgba(255, 253, 249, 0.78) 41%, rgba(255, 253, 249, 0.1) 74%),
-    url("https://images.unsplash.com/photo-1516563670759-299070f0dc54?auto=format&fit=crop&w=1800&q=82") center / cover;
+    linear-gradient(90deg, rgba(255, 253, 249, 0.88) 0%, rgba(255, 253, 249, 0.56) 36%, rgba(255, 253, 249, 0.0) 72%),
+    url("https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center 18%;
+  background-size: cover;
 }
 
 .hero-copy {
@@ -572,8 +574,10 @@ input[type="checkbox"] {
     min-height: 500px;
     align-items: end;
     background:
-      linear-gradient(180deg, rgba(255, 253, 249, 0.2) 0%, rgba(255, 253, 249, 0.96) 58%, rgba(255, 253, 249, 1) 100%),
-      url("https://images.unsplash.com/photo-1516563670759-299070f0dc54?auto=format&fit=crop&w=1200&q=82") center top / cover;
+      linear-gradient(180deg, rgba(255, 253, 249, 0.16) 0%, rgba(255, 253, 249, 0.84) 64%, rgba(255, 253, 249, 1) 100%),
+      url("https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center 12%;
+    background-size: cover;
   }
 
   h1 {
