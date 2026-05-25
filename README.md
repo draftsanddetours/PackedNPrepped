@@ -8,7 +8,7 @@ Open `index.html` in a browser, or serve the folder with any simple static serve
 
 ## Publish With GitHub Pages
 
-1. Create a GitHub repository for this folder.
+1. Create a GitHub repository named `PackedNPrepped` under `draftsanddetours`.
 2. Push these files to the repository.
 3. In GitHub, open Settings > Pages.
 4. Choose the main branch and the root folder.
