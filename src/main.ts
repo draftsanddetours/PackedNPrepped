@@ -48,7 +48,7 @@ const categories: Category[] = [
   {
     name: "Carry-On Only",
     count: "14 lists",
-    image: "https://images.unsplash.com/photo-1527090496-346715fed66d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "National Parks",
