@@ -130,8 +130,10 @@ function renderCategories() {
 }
 
 function renderListCard(list) {
-  const card = document.createElement("article");
+  const card = document.createElement("a");
   card.className = "list-card";
+  card.href = "packing-list.html";
+  card.setAttribute("aria-label", `Open ${list.title}`);
   card.append(makeImage(list.image, `${list.title} packing list`));
   card.insertAdjacentHTML("beforeend", `<h3>${list.title}</h3><p>${list.meta}</p>`);
   return card;

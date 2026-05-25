@@ -12,37 +12,38 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#" aria-label="Packed N Prepped home">Packed N Prepped</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#destinations">Destinations</a>
-        <a href="#trip-types">Trip Types</a>
-        <a href="#seasonal">Seasonal</a>
-        <a href="#tips">Tips</a>
-      </nav>
-      <button class="icon-button" type="button" aria-label="Search packing lists">
-        <svg aria-hidden="true" viewBox="0 0 24 24">
-          <path d="m21 21-4.35-4.35m2.1-5.15a7.25 7.25 0 1 1-14.5 0 7.25 7.25 0 0 1 14.5 0Z" />
-        </svg>
-      </button>
-    </header>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="Packed N Prepped home">Pack Well</a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#destinations">Destinations</a>
+          <a href="#trip-types">Trip Types</a>
+          <a href="#seasonal">Packing Style</a>
+          <a href="#tips">Tips</a>
+          <a href="#all-lists">Shop</a>
+        </nav>
+        <button class="icon-button" type="button" aria-label="Search packing lists">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m21 21-4.35-4.35m2.1-5.15a7.25 7.25 0 1 1-14.5 0 7.25 7.25 0 0 1 14.5 0Z" />
+          </svg>
+        </button>
+      </header>
 
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Pack smarter, forget less</p>
-          <h1 id="hero-title">Find the perfect packing list for any plan</h1>
-          <form class="search-panel" role="search">
-            <label class="visually-hidden" for="packing-search">Search by destination, event, or scenario</label>
-            <input id="packing-search" type="search" placeholder="Where are you going?" autocomplete="off" />
-            <button type="submit" aria-label="Search">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="m21 21-4.35-4.35m2.1-5.15a7.25 7.25 0 1 1-14.5 0 7.25 7.25 0 0 1 14.5 0Z" />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </section>
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <h1 id="hero-title">Find the perfect packing list for any adventure</h1>
+            <form class="search-panel" role="search">
+              <label class="visually-hidden" for="packing-search">Search by destination, event, or scenario</label>
+              <input id="packing-search" type="search" placeholder="Where are you going?" autocomplete="off" />
+              <button type="submit" aria-label="Search">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="m21 21-4.35-4.35m2.1-5.15a7.25 7.25 0 1 1-14.5 0 7.25 7.25 0 0 1 14.5 0Z" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </section>
 
       <section id="destinations" class="content-band">
         <div class="section-heading">
@@ -99,12 +100,13 @@
         </div>
         <div class="all-list-grid" id="all-list-grid"></div>
       </section>
-    </main>
+      </main>
 
-    <footer class="site-footer">
-      <p>Packed N Prepped</p>
-      <p>Curated packing lists for real trips, events, and everyday adventures.</p>
-    </footer>
+      <footer class="site-footer">
+        <p>Packed N Prepped</p>
+        <p>Curated packing lists for real trips, events, and everyday adventures.</p>
+      </footer>
+    </div>
 
     <script src="script.js"></script>
   </body>
