@@ -330,7 +330,7 @@ h1 {
   grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
   gap: clamp(24px, 6vw, 70px);
   color: #3d3836;
-  background: #f5d9dd;
+  background: #fee3d4;
 }
 
 .feature-band .eyebrow {
