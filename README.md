@@ -28,6 +28,7 @@ npm run build
 
 - Use TypeScript for site behavior.
 - Use the SSH Git remote for GitHub pushes.
+- If you run any Python helpers or validation scripts, use `.venv/bin/python`.
 
 ## Drafting Posts
 
