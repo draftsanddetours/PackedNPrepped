@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>7 Day Europe Summer Packing List | Packed N Prepped</title>
+    <title>Packed N Prepped | Packing List</title>
     <meta
       name="description"
-      content="A printable 7 day Europe summer packing checklist with clothing, shoes, toiletries, documents, electronics, and easy-to-forget items."
+      content="A printable packing checklist with clothing, shoes, toiletries, documents, electronics, and easy-to-forget items."
     />
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="stylesheet" href="styles.css?v=7" />
@@ -14,94 +14,19 @@
   <body>
     <main class="post-shell">
       <a class="back-link" href="index.html#all-lists">Back to All Lists</a>
-
       <section class="post-hero" aria-labelledby="post-title">
         <div>
-          <h1 id="post-title">7 Day Europe Summer Packing List</h1>
-          <dl class="trip-meta">
-            <div>
-              <dt>Destination</dt>
-              <dd>Europe</dd>
-            </div>
-            <div>
-              <dt>Season</dt>
-              <dd>Summer</dd>
-            </div>
-            <div>
-              <dt>Duration</dt>
-              <dd>7 Days</dd>
-            </div>
-            <div>
-              <dt>Bag</dt>
-              <dd>Carry-On Only</dd>
-            </div>
-            <div>
-              <dt>Style</dt>
-              <dd>Casual + Chic</dd>
-            </div>
-          </dl>
+          <h1 id="post-title">Packing List</h1>
+          <dl class="trip-meta" id="trip-meta"></dl>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=900&q=82"
-          alt="European street with warm summer light"
-        />
+        <img id="post-hero-image" alt="Packing list travel scene" />
       </section>
 
-      <section class="checklist-grid" aria-label="Packing checklist">
-        <article class="check-card">
-          <h2>Clothing</h2>
-          <label><input type="checkbox" /> 5 Tops</label>
-          <label><input type="checkbox" /> 2 Dresses</label>
-          <label><input type="checkbox" /> 2 Pairs of Jeans</label>
-          <label><input type="checkbox" /> 1 Light Jacket</label>
-          <label><input type="checkbox" /> 1 Sweater</label>
-          <label><input type="checkbox" /> Undergarments</label>
-        </article>
-        <article class="check-card">
-          <h2>Shoes</h2>
-          <label><input type="checkbox" /> White Sneakers</label>
-          <label><input type="checkbox" /> Sandals</label>
-          <label><input type="checkbox" /> Flats</label>
-        </article>
-        <article class="check-card">
-          <h2>Toiletries</h2>
-          <label><input type="checkbox" /> Toothbrush</label>
-          <label><input type="checkbox" /> Skincare</label>
-          <label><input type="checkbox" /> Sunscreen</label>
-          <label><input type="checkbox" /> Makeup</label>
-          <label><input type="checkbox" /> Hair Essentials</label>
-        </article>
-        <article class="check-card">
-          <h2>Electronics</h2>
-          <label><input type="checkbox" /> Phone + Charger</label>
-          <label><input type="checkbox" /> Portable Charger</label>
-          <label><input type="checkbox" /> Camera</label>
-          <label><input type="checkbox" /> Universal Adapter</label>
-        </article>
-        <article class="check-card">
-          <h2>Documents</h2>
-          <label><input type="checkbox" /> Passport</label>
-          <label><input type="checkbox" /> ID</label>
-          <label><input type="checkbox" /> Credit Cards</label>
-          <label><input type="checkbox" /> Travel Insurance</label>
-        </article>
-        <article class="check-card">
-          <h2>Miscellaneous</h2>
-          <label><input type="checkbox" /> Water Bottle</label>
-          <label><input type="checkbox" /> Sunglasses</label>
-          <label><input type="checkbox" /> Reusable Tote</label>
-          <label><input type="checkbox" /> Snacks</label>
-        </article>
-      </section>
+      <section class="checklist-grid" aria-label="Packing checklist" id="post-sections"></section>
 
       <section class="forgotten-card" aria-labelledby="forgotten-title">
         <h2 id="forgotten-title">Things I Almost Forgot</h2>
-        <div class="forgotten-grid">
-          <label><input type="checkbox" /> Lint Roller</label>
-          <label><input type="checkbox" /> Band-Aids</label>
-          <label><input type="checkbox" /> Safety Pins</label>
-          <label><input type="checkbox" /> Tide Pen</label>
-        </div>
+        <div class="forgotten-grid" id="post-forgotten"></div>
       </section>
 
       <div class="post-actions">
@@ -109,5 +34,7 @@
         <button type="button">Shop This List</button>
       </div>
     </main>
+
+    <script type="module" src="/src/post.ts"></script>
   </body>
 </html>
